@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 md:grid-cols-3">
         {/*services*/}
         <div>
-          <h3 className="border-separator mb-2 border-b pb-2 font-semibold">
+          <h3 className="border-footer-separator mb-2 border-b pb-2 font-semibold">
             Услуги
           </h3>
           <ul className="space-y-2 text-sm">
@@ -19,7 +19,7 @@ const Footer = () => {
 
         {/*contacts*/}
         <div>
-          <h3 className="border-separator mb-2 border-b pb-2 font-semibold">
+          <h3 className="border-footer-separator mb-2 border-b pb-2 font-semibold">
             Контакты
           </h3>
           <ul className="space-y-2 text-sm">
@@ -43,7 +43,7 @@ const Footer = () => {
 
         {/*info*/}
         <div>
-          <h3 className="border-separator mb-2 border-b pb-2 font-semibold">
+          <h3 className="border-footer-separator mb-2 border-b pb-2 font-semibold">
             Информация
           </h3>
           <ul className="space-y-2 text-sm">
@@ -53,7 +53,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="border-separator mt-10 border-t pt-4 text-center text-sm">
+      <div className="border-footer-separator mt-10 border-t pt-4 text-center text-sm">
         <span>
           © {new Date().getFullYear()} fauna-moscow.ru. Все права защищены.
           <a

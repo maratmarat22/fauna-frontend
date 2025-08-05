@@ -10,7 +10,7 @@ const links = [
 
 const Header = () => {
   return (
-    <header className="font-header bg-bg-contrast border-separator sticky top-0 z-50 h-[var(--header-height)] border-b px-4 py-2">
+    <header className="font-header bg-bg-contrast border-separator sticky top-0 z-50 h-[var(--header-height)] w-full border-b px-4 py-2">
       <div className="container mx-auto flex items-center justify-around">
         {/*logo*/}
         <Link href="/">
@@ -39,7 +39,7 @@ const Header = () => {
 
         {/*contact*/}
         <Link
-          className="hover:bg-main-hover bg-main rounded-full px-7 py-3 text-xl text-white transition ease-in-out select-none"
+          className="hover:bg-main-hover bg-main max-w-40 rounded-3xl px-5 py-3 text-center text-xl text-white transition ease-in-out select-none md:max-w-70 md:rounded-full"
           href="#contact"
         >
           Связаться с нами

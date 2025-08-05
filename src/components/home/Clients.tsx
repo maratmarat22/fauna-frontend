@@ -20,29 +20,24 @@ const clientsInfo: ClientInfo[] = [
   { src: '/clients/etalon.png', alt: 'Эталон' },
 ];
 
-const Clients = () => {
+const Clients = ({ className }: { className?: string }) => {
   return (
-    <section className="w-full px-4 py-12 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-4xl">
-        <h2 className="text-main-color mb-8 text-center text-3xl font-bold">
-          Наши клиенты
-        </h2>
-        <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4">
-          {clientsInfo.map((ci, i) => (
-            <div
-              key={i}
-              className="shadow-main-color/70 rounded-xl bg-white p-5 shadow-xl"
-            >
-              <Image
-                src={ci.src}
-                alt={ci.alt}
-                className="mx-auto select-none"
-                width={180}
-                height={180}
-              />
-            </div>
-          ))}
-        </div>
+    <section
+      className={`${className ?? ''} w-full text-center sm:px-6 lg:px-8`}
+    >
+      <h2 className="section-header mx-auto mb-8 w-fit">Наши клиенты</h2>
+      <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4">
+        {clientsInfo.map((ci, i) => (
+          <div key={i} className="rounded-xl bg-white p-5">
+            <Image
+              src={ci.src}
+              alt={ci.alt}
+              className="mx-auto select-none"
+              width={180}
+              height={180}
+            />
+          </div>
+        ))}
       </div>
     </section>
   );

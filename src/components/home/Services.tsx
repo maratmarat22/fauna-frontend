@@ -2,11 +2,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 import services from '@/data/services';
 
-const Services = ({ id }: { id: string }) => {
+const Services = ({ id, className }: { id: string; className?: string }) => {
   return (
-    <section id={id} className="scroll-mt-40 px-4 py-16 sm:px-6 lg:px-12">
-      <h2 className="section-header mx-auto mb-6 w-fit">Популярные услуги</h2>
-      <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+    <section
+      id={id}
+      className={`${className ?? ''} scroll-mt-40 px-4 sm:px-6 lg:px-12`}
+    >
+      <h2 className="section-header mx-auto mb-6 w-fit text-center">
+        Популярные услуги
+      </h2>
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
         {/* Utilization */}
         <div className="services-card">
           <h3>Вывоз и утилизация отходов</h3>

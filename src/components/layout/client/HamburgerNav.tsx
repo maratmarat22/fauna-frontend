@@ -18,29 +18,29 @@ const HamburgerNav = () => {
       {/* Кнопка */}
       <button
         onClick={() => setNavOpen(prev => !prev)}
-        className="text-main-color transform transition-transform duration-300 md:hidden"
+        className="bg-main rounded-full p-3 text-white md:hidden"
         aria-label={navOpen ? 'Закрыть меню' : 'Открыть меню'}
       >
-        {navOpen ? <LuX className="h-7 w-7" /> : <LuMenu className="h-7 w-7" />}
+        {navOpen ? <LuX className="h-6 w-6" /> : <LuMenu className="h-6 w-6" />}
       </button>
 
       {/* Меню */}
-      {navOpen && (
-        <div className="fixed top-[var(--header-height,64px)] left-0 z-40 w-screen bg-white px-4 py-6 shadow-md md:hidden">
-          <nav className="flex flex-col gap-6">
-            {links.map((l, i) => (
-              <Link
-                key={i}
-                href={l.href}
-                onClick={() => setNavOpen(false)}
-                className="hover:text-main-color text-lg transition"
-              >
-                {l.name}
-              </Link>
-            ))}
-          </nav>
-        </div>
-      )}
+      <div
+        className={`bg-bg-contrast border-separator fixed top-[var(--header-height)] z-50 w-full transform border-b px-4 py-6 transition-all duration-200 ease-in-out md:hidden ${navOpen ? 'pointer-events-auto translate-y-0 opacity-100' : 'pointer-events-none -translate-y-5 opacity-0'} `}
+      >
+        <nav className="flex flex-col gap-6">
+          {links.map((l, i) => (
+            <Link
+              key={i}
+              href={l.href}
+              onClick={() => setNavOpen(false)}
+              className="hover:text-main text-lg transition-colors"
+            >
+              {l.name}
+            </Link>
+          ))}
+        </nav>
+      </div>
     </>
   );
 };
