@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://fauna-moscow.ru
+
+# Sitemaps
+Sitemap: https://fauna-moscow.ru/sitemap.xml
