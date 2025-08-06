@@ -2,6 +2,7 @@ type Service = {
   name: string;
   desc?: string;
   href: string;
+  slug: string;
   iconSrc: string;
   iconAlt: string;
   rootPageSide: 'l' | 'r';
@@ -11,7 +12,8 @@ type Service = {
 const services: Service[] = [
   {
     name: 'Вывоз строительных отходов',
-    href: '/service/vyvoz-stroitelnyh-othodov',
+    href: '/vyvoz-stroitelnyh-othodov',
+    slug: 'vyvoz-stroitelnyh-othodov',
     iconSrc: '/services/icons/blank-truck-teal.png',
     iconAlt: 'Вывоз строительных отходов',
     rootPageSide: 'l',
@@ -19,7 +21,8 @@ const services: Service[] = [
   },
   {
     name: 'Вывоз производственных отходов',
-    href: '/service/vyvoz-proizvodstvennyh-othodov',
+    href: '/vyvoz-proizvodstvennyh-othodov',
+    slug: 'vyvoz-proizvodstvennyh-othodov',
     iconSrc: '/services/icons/blank-truck-teal.png',
     iconAlt: 'Вывоз производственных отходов',
     rootPageSide: 'l',
@@ -27,7 +30,8 @@ const services: Service[] = [
   },
   {
     name: 'Вывоз отходов, образованных при сносе и разборе зданий',
-    href: '/service/vyvoz-posle-snosa',
+    href: '/vyvoz-posle-snosa',
+    slug: 'vyvoz-posle-snosa',
     iconSrc: '/services/icons/blank-truck-teal.png',
     iconAlt: 'Вывоз отходов, образованных при сносе и разборе зданий',
     rootPageSide: 'l',
@@ -35,7 +39,8 @@ const services: Service[] = [
   },
   {
     name: 'Вывоз грунта',
-    href: '/service/vyvoz-grunta',
+    href: '/vyvoz-grunta',
+    slug: 'vyvoz-grunta',
     iconSrc: '/services/icons/blank-truck-teal.png',
     iconAlt: 'Вывоз грунта',
     rootPageSide: 'l',
@@ -43,7 +48,8 @@ const services: Service[] = [
   },
   {
     name: 'Вывоз и утилизация снега',
-    href: '/service/vyvoz-snega',
+    href: '/vyvoz-snega',
+    slug: 'vyvoz-snega',
     iconSrc: '/services/icons/blank-truck-teal.png',
     iconAlt: 'Вывоз и утилизация снега',
     rootPageSide: 'l',
@@ -51,7 +57,8 @@ const services: Service[] = [
   },
   {
     name: 'Демонтаж зданий и сооружений',
-    href: '/service/demontazh-zdaniy',
+    href: '/demontazh-zdaniy',
+    slug: 'demontazh-zdaniy',
     iconSrc: '/services/icons/snos.png',
     iconAlt: 'Демонтаж зданий и сооружений',
     rootPageSide: 'l',
@@ -59,7 +66,8 @@ const services: Service[] = [
   },
   {
     name: 'Полное юридическое сопровождение и предоставление всех закрывающих документов, оформление паспортов отходов',
-    href: '/service/yuridicheskoe-soprovozhdenie',
+    href: '/yuridicheskoe-soprovozhdenie',
+    slug: 'yuridicheskoe-soprovozhdenie',
     iconSrc: '/services/icons/docs.png',
     iconAlt:
       'Полное юридическое сопровождение и предоставление всех закрывающих документов, оформление паспортов отходов',
@@ -68,7 +76,8 @@ const services: Service[] = [
   },
   {
     name: 'Доставка пескогрунта',
-    href: '/service/dostavka-peskogrunta',
+    href: '/dostavka-peskogrunta',
+    slug: 'dostavka-peskogrunta',
     iconSrc: '/services/icons/blank-truck-teal-rev.png',
     iconAlt: 'Доставка пескогрунта',
     rootPageSide: 'r',
@@ -76,7 +85,8 @@ const services: Service[] = [
   },
   {
     name: 'Доставка асфальтной крошки',
-    href: '/service/dostavka-kroshki',
+    href: '/dostavka-kroshki',
+    slug: 'dostavka-kroshki',
     iconSrc: '/services/icons/blank-truck-teal-rev.png',
     iconAlt: 'Доставка асфальтной крошки',
     rootPageSide: 'r',
@@ -84,7 +94,8 @@ const services: Service[] = [
   },
   {
     name: 'Доставка кирпичного боя',
-    href: '/service/dostavka-kirpicha',
+    href: '/dostavka-kirpicha',
+    slug: 'dostavka-kirpicha',
     iconSrc: '/services/icons/blank-truck-teal-rev.png',
     iconAlt: 'Доставка кирпичного боя',
     rootPageSide: 'r',
@@ -92,7 +103,8 @@ const services: Service[] = [
   },
   {
     name: 'Доставка нерудных материалов',
-    href: '/service/dostavka-nerud',
+    href: '/dostavka-nerud',
+    slug: 'dostavka-nerud',
     iconSrc: '/services/icons/blank-truck-teal-rev.png',
     iconAlt: 'Доставка нерудных материалов',
     rootPageSide: 'r',
@@ -100,7 +112,8 @@ const services: Service[] = [
   },
   {
     name: 'Доставка плодородной земли',
-    href: '/service/dostavka-zemli',
+    href: '/dostavka-zemli',
+    slug: 'dostavka-zemli',
     iconSrc: '/services/icons/blank-truck-teal-rev.png',
     iconAlt: 'Доставка плодородной земли',
     rootPageSide: 'r',

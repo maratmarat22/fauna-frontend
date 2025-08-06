@@ -10,7 +10,7 @@ const links = [
   { name: 'Автопарк', href: '/#cars' },
 ];
 
-const HamburgerNav = () => {
+const HamburgerNav = ({ pathname }: { pathname: string }) => {
   const [navOpen, setNavOpen] = useState(false);
 
   return (
@@ -32,7 +32,7 @@ const HamburgerNav = () => {
           {links.map((l, i) => (
             <Link
               key={i}
-              href={l.href}
+              href={pathname !== l.href ? l.href : '#about'}
               onClick={() => setNavOpen(false)}
               className="hover:text-main text-lg transition-colors"
             >

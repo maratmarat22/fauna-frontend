@@ -2,9 +2,10 @@ import { FaWhatsapp } from 'react-icons/fa';
 import { FiMail, FiPhone } from 'react-icons/fi';
 import { GrGithub } from 'react-icons/gr';
 
-const Footer = () => {
+const Footer = ({ pathname }: { pathname: string }) => {
   return (
     <footer className="bg-footer px-4 py-5 text-white">
+      <h1>{pathname}</h1>
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 md:grid-cols-3">
         {/*services*/}
         <div>

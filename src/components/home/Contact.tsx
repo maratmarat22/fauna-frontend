@@ -1,9 +1,9 @@
 import Contacts from '@/components/contact/Contacts';
 import Order from '@/components/contact/Order';
 
-const ContactUs = ({ id, className }: { id: string; className?: string }) => {
+const Contact = ({ id, className }: { id: string; className?: string }) => {
   return (
-    <section id={id} className={`${className ?? ''} scroll-mt-50`}>
+    <section id={id} className={`${className ?? ''} scroll-mt-36`}>
       <div className="mx-auto w-fit lg:ml-50">
         <h2 className="section-header mb-6 text-center">
           Свяжитесь с нами прямо сейчас...
@@ -18,4 +18,4 @@ const ContactUs = ({ id, className }: { id: string; className?: string }) => {
   );
 };
 
-export default ContactUs;
+export default Contact;
