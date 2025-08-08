@@ -2,7 +2,7 @@ import services from '@/data/services';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Contacts from '@/components/contact/Contacts';
-import Order from '@/components/contact/Order';
+import Order from '@/components/contact/client/Order';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 

@@ -27,10 +27,7 @@ const features = [
 
 const About = ({ id, className }: { id: string; className?: string }) => {
   return (
-    <section
-      id={id}
-      className={`${className ?? ''} bg-bg-main w-full scroll-mt-96 px-4`}
-    >
+    <section id={id} className={`${className ?? ''} w-full scroll-mt-52 px-4`}>
       <h2 className="section-header mx-auto mb-6 w-fit text-center">О нас</h2>
 
       {/* Вводный текст */}

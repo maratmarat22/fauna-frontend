@@ -5,6 +5,7 @@ import { FiMail, FiPhone } from 'react-icons/fi';
 type Contact = {
   label: string;
   href: string;
+  className?: string;
   icon: IconType;
 };
 

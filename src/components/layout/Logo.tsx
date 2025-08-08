@@ -2,9 +2,9 @@ import Image from 'next/image';
 
 const Logo = () => {
   return (
-    <div className="group flex items-center gap-3">
+    <div className="group flex items-center gap-5">
       {/* Логотип-иконка */}
-      <div className="before:from-main/20 before:to-main/20 before:animate-logoGradient relative h-20 w-20 flex-shrink-0 overflow-hidden rounded-xl shadow-md before:absolute before:inset-0 before:bg-gradient-to-br before:via-transparent before:opacity-60">
+      <div className="before:from-main/20 before:to-main/20 before:animate-logoGradient shadow-separator relative h-20 w-20 flex-shrink-0 overflow-hidden rounded-xl shadow-md before:absolute before:inset-0 before:bg-gradient-to-br before:via-transparent before:opacity-60">
         <Image
           src="/logo.webp"
           alt="Фауна — вывоз мусора и доставка нерудных материалов"

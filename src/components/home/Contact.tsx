@@ -1,5 +1,5 @@
 import Contacts from '@/components/contact/Contacts';
-import Order from '@/components/contact/Order';
+import Order from '@/components/contact/client/Order';
 
 const Contact = ({ id, className }: { id: string; className?: string }) => {
   return (
