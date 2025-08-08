@@ -1,5 +1,5 @@
 import Contacts from '@/components/contact/Contacts';
-import Order from '@/components/contact/client/Order';
+import RequestForm from '@/components/contact/client/RequestForm';
 
 const Contact = ({ id, className }: { id: string; className?: string }) => {
   return (
@@ -12,7 +12,7 @@ const Contact = ({ id, className }: { id: string; className?: string }) => {
       </div>
       <div className="mx-auto mt-16 w-fit lg:mr-50">
         <h2 className="section-header text-center">...или оставьте заявку</h2>
-        <Order className="bg-bg-contrast mx-auto mt-6 max-w-xl rounded-2xl p-5" />
+        <RequestForm className="bg-bg-contrast mx-auto mt-6 max-w-xl rounded-2xl p-5" />
       </div>
     </section>
   );

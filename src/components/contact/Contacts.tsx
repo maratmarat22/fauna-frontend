@@ -3,7 +3,7 @@ import contacts from '@/data/contacts';
 const Contacts = ({ className }: { className?: string }) => {
   return (
     <div
-      className={`${className ?? ''} flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-5`}
+      className={`${className ?? ''} flex flex-col gap-3 sm:gap-5 md:flex-row`}
     >
       {contacts.map((c, i) => (
         <a

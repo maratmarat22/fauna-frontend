@@ -26,7 +26,7 @@ const HamburgerNav = ({ pathname }: { pathname: string }) => {
 
       {/* Меню */}
       <div
-        className={`bg-bg-contrast border-separator fixed top-[var(--header-height)] z-50 w-full transform border-b px-4 py-6 transition-all duration-200 ease-in-out md:hidden ${navOpen ? 'pointer-events-auto translate-y-0 opacity-100' : 'pointer-events-none -translate-y-5 opacity-0'} `}
+        className={`bg-bg-contrast border-separator fixed top-[var(--header-height)] left-0 z-50 w-full transform border-b px-4 py-6 transition-all duration-200 ease-in-out md:hidden ${navOpen ? 'pointer-events-auto translate-y-0 opacity-100' : 'pointer-events-none -translate-y-5 opacity-0'} `}
       >
         <nav className="flex flex-col gap-6">
           {links.map((l, i) => (

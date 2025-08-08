@@ -2,7 +2,7 @@ import services from '@/data/services';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Contacts from '@/components/contact/Contacts';
-import Order from '@/components/contact/client/Order';
+import RequestForm from '@/components/contact/client/RequestForm';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 
@@ -41,9 +41,14 @@ export default async function ServicePage({
               Описание услуги пока отсутствует.
             </p>
           )}
-
-          <Contacts className="mt-16" />
-          <Order className="mt-16" />
+          <h2 className="section-header mx-auto mt-16 w-fit text-center">
+            Свяжитесь с нами прямо сейчас...
+          </h2>
+          <Contacts className="mx-auto mt-8 w-fit" />
+          <h2 className="section-header mx-auto mt-16 w-fit text-center">
+            ...или оставьте заявку
+          </h2>
+          <RequestForm className="bg-bg-contrast mx-auto mt-8 w-fit rounded-2xl p-5" />
         </div>
       </main>
       <Footer pathname={service.href} />

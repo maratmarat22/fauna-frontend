@@ -5,23 +5,11 @@ type Label = {
 
 const labels: Label[] = [
   {
-    text: 'Свяжитесь со мной через:',
-    select: {
-      name: 'contact-type',
-      options: [
-        { value: '', text: 'Выберите способ' },
-        { value: 'email', text: 'Эл. почту' },
-        { value: 'tel', text: 'Телефон' },
-        { value: 'wa', text: 'WhatsApp' },
-      ],
-    },
-  },
-  {
-    text: 'Услуга:',
+    text: 'Услуга',
     select: {
       name: 'service',
       options: [
-        { value: '', text: 'Выберите услугу' },
+        { value: '', text: '-' },
         { value: 'construction', text: 'Вывоз строительного мусора' },
         { value: 'large', text: 'Вывоз крупногабаритного мусора' },
         { value: 'snow', text: 'Вывоз снега' },
@@ -31,11 +19,11 @@ const labels: Label[] = [
     },
   },
   {
-    text: 'Объём:',
+    text: 'Объём',
     select: {
       name: 'volume',
       options: [
-        { value: '', text: 'Выберите объём' },
+        { value: '', text: '-' },
         { value: '1', text: 'до 1 м³' },
         { value: '3', text: '1–3 м³' },
         { value: '5', text: '3–5 м³' },
@@ -45,11 +33,11 @@ const labels: Label[] = [
     },
   },
   {
-    text: 'Район / Округ Москвы:',
+    text: 'Район / Округ Москвы',
     select: {
       name: 'district',
       options: [
-        { value: '', text: 'Выберите район' },
+        { value: '', text: '-' },
         { value: 'center', text: 'Центральный' },
         { value: 'north', text: 'Северный' },
         { value: 'north-east', text: 'Северо-Восточный' },

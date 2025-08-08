@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Logo from '@/components/layout/Logo';
 import HamburgerNav from '@/components/layout/client/HamburgerNav';
+import { FiMessageSquare } from 'react-icons/fi';
 
 const links = [
   { name: 'Главная', href: '/' },
@@ -34,9 +35,16 @@ const Header = ({ pathname }: { pathname: string }) => {
         {/*contact*/}
         <Link
           href="/#contact"
-          className="bg-main hover:bg-main-hover max-w-40 rounded-4xl px-6 py-3 text-center text-xl font-medium text-white transition-all duration-300 ease-out select-none hover:-translate-y-0.5 hover:shadow-md md:max-w-100 md:rounded-full"
+          className="bg-main hover:bg-main-hover hidden max-w-40 rounded-4xl px-6 py-3 text-center text-xl font-medium text-white transition-all duration-300 ease-out select-none hover:-translate-y-0.5 hover:shadow-md sm:block md:max-w-100 md:rounded-full"
         >
           Связаться с нами
+        </Link>
+
+        <Link
+          href="#contact"
+          className="bg-main/30 hover:bg-main fixed right-5 bottom-5 rounded-full p-5 text-white/70 transition-colors hover:text-white sm:hidden"
+        >
+          <FiMessageSquare className="h-7 w-7" />
         </Link>
 
         <HamburgerNav pathname={pathname} />

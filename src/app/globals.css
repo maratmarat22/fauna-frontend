@@ -91,6 +91,18 @@ select option {
   font-weight: var(--font-weight-bold);
 }
 
+.form-input {
+  border-color: var(--color-main-hover);
+  border-top-left-radius: var(--radius-xl);
+  border-bottom-left-radius: var(--radius-xl);
+  border-top-style: var(--tw-border-style);
+  border-top-width: 1px;
+  border-bottom-style: var(--tw-border-style);
+  border-bottom-width: 1px;
+  border-left-style: var(--tw-border-style);
+  border-left-width: 1px;
+}
+
 @media (max-width: 767px) {
   .section-header {
     padding-inline: calc(var(--spacing) * 4);
