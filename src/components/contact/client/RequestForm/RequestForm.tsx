@@ -4,12 +4,7 @@ import { FiCheckCircle, FiAlertCircle } from 'react-icons/fi';
 import processRequest from '@/serverActions/processRequest';
 import type { Contact } from './data/types';
 import { placeholders, COOLDOWN_MS } from './data/misc';
-import {
-  contactOptions,
-  serviceOptions,
-  volumeOptions,
-  districtOptions,
-} from './data/options';
+import { contactOptions, serviceOptions, volumeOptions, districtOptions } from './data/options';
 import { Submit, Select, RequiredCircle } from './subcomponents';
 import { useEffect, useState } from 'react';
 
@@ -37,10 +32,7 @@ const RequestForm = ({
   // Автозакрытие тоста
   useEffect(() => {
     if (!toast.open) return;
-    const id = setTimeout(
-      () => setToast(t => ({ ...t, open: false, text: null })),
-      toast.ms,
-    );
+    const id = setTimeout(() => setToast(t => ({ ...t, open: false, text: null })), toast.ms);
     return () => clearTimeout(id);
   }, [toast.open, toast.ms]);
 
@@ -59,10 +51,7 @@ const RequestForm = ({
   // Тик раз в секунду, пока есть оставшееся время
   useEffect(() => {
     if (cooldownLeft <= 0) return;
-    const id = setInterval(
-      () => setCooldownLeft(prev => Math.max(0, prev - 1000)),
-      1000,
-    );
+    const id = setInterval(() => setCooldownLeft(prev => Math.max(0, prev - 1000)), 1000);
     return () => clearInterval(id);
   }, [cooldownLeft]);
 
@@ -83,11 +72,7 @@ const RequestForm = ({
       setCooldownLeft(COOLDOWN_MS);
       openToast(true, 'Мы получили вашу заявку', 2500);
     } catch {
-      openToast(
-        false,
-        'Не удалось связаться с сервером, попробуйте позже или позвоните нам',
-        3000,
-      );
+      openToast(false, 'Не удалось связаться с сервером, попробуйте позже или позвоните нам', 3000);
     }
   };
 
@@ -122,11 +107,7 @@ const RequestForm = ({
         {/* //! first name */}
         <label className="flex flex-col gap-1 text-sm font-medium">
           Ваше имя
-          <input
-            name="first-name"
-            type="text"
-            className="form-input mt-1 px-3 py-2"
-          />
+          <input name="first-name" type="text" className="form-input mt-1 px-3 py-2" />
         </label>
 
         {/* //! second name (honeypot) */}
@@ -166,7 +147,7 @@ const RequestForm = ({
 
         {/* //! service */}
         <Select
-          name="service"
+          name="service-id"
           label="Услуга"
           required
           defaultValue={serviceOption}
@@ -177,12 +158,7 @@ const RequestForm = ({
         <Select name="volume" label="Объём" required options={volumeOptions} />
 
         {/* //! district */}
-        <Select
-          name="district"
-          label="Округ"
-          required
-          options={districtOptions}
-        />
+        <Select name="district" label="Округ" required options={districtOptions} />
 
         {/* //! open extra button */}
         <button

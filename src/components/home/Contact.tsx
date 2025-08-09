@@ -1,4 +1,4 @@
-import Contacts from '@/components/contact/Contacts';
+import Contacts from '@/components/contact/Contacts/Contacts';
 import RequestForm from '@/components/contact/client/RequestForm/RequestForm';
 
 const Contact = ({ id, className }: { id: string; className?: string }) => {

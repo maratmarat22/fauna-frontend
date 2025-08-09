@@ -1,123 +1,119 @@
+type ServiceType = 'waste' | 'inert' | 'demolition' | 'other';
+type Icon = { side: 'l' | 'r'; src: string };
+
 type Service = {
+  id: string;
   name: string;
-  desc?: string;
+  type: ServiceType;
   href: string;
-  slug: string;
-  iconSrc: string;
-  iconAlt: string;
-  rootPageSide: 'l' | 'r';
-  isMovable: boolean;
+  onRoot: boolean;
+  icon?: Icon;
+  desc?: string;
 };
 
 const services: Service[] = [
   {
+    id: '0',
     name: 'Вывоз строительных отходов',
+    type: 'waste',
     href: '/vyvoz-stroitelnyh-othodov',
-    slug: 'vyvoz-stroitelnyh-othodov',
-    iconSrc: '/services/icons/blank-truck-teal.png',
-    iconAlt: 'Вывоз строительных отходов',
-    rootPageSide: 'l',
-    isMovable: true,
+    icon: { side: 'l', src: '/services/icons/blank-truck-teal.png' },
+    onRoot: true,
   },
   {
+    id: '1',
     name: 'Вывоз производственных отходов',
+    type: 'waste',
     href: '/vyvoz-proizvodstvennyh-othodov',
-    slug: 'vyvoz-proizvodstvennyh-othodov',
-    iconSrc: '/services/icons/blank-truck-teal.png',
-    iconAlt: 'Вывоз производственных отходов',
-    rootPageSide: 'l',
-    isMovable: true,
+    icon: { side: 'l', src: '/services/icons/blank-truck-teal.png' },
+    onRoot: true,
   },
   {
+    id: '2',
+    name: 'Вывоз крупногабаритных отходов',
+    type: 'waste',
+    href: '/vyvoz-krupnogabaritnyh-othodov',
+    icon: { side: 'l', src: '/services/icons/blank-truck-teal.png' },
+    onRoot: true,
+  },
+  {
+    id: '3',
     name: 'Вывоз отходов, образованных при сносе и разборе зданий',
+    type: 'waste',
     href: '/vyvoz-posle-snosa',
-    slug: 'vyvoz-posle-snosa',
-    iconSrc: '/services/icons/blank-truck-teal.png',
-    iconAlt: 'Вывоз отходов, образованных при сносе и разборе зданий',
-    rootPageSide: 'l',
-    isMovable: true,
+    icon: { side: 'l', src: '/services/icons/blank-truck-teal.png' },
+    onRoot: true,
   },
   {
+    id: '4',
     name: 'Вывоз грунта',
+    type: 'waste',
     href: '/vyvoz-grunta',
-    slug: 'vyvoz-grunta',
-    iconSrc: '/services/icons/blank-truck-teal.png',
-    iconAlt: 'Вывоз грунта',
-    rootPageSide: 'l',
-    isMovable: true,
+    icon: { side: 'l', src: '/services/icons/blank-truck-teal.png' },
+    onRoot: true,
   },
   {
+    id: '5',
     name: 'Вывоз и утилизация снега',
+    type: 'waste',
     href: '/vyvoz-snega',
-    slug: 'vyvoz-snega',
-    iconSrc: '/services/icons/blank-truck-teal.png',
-    iconAlt: 'Вывоз и утилизация снега',
-    rootPageSide: 'l',
-    isMovable: true,
+    icon: { side: 'l', src: '/services/icons/blank-truck-teal.png' },
+    onRoot: true,
   },
   {
+    id: '6',
     name: 'Демонтаж зданий и сооружений',
+    type: 'demolition',
     href: '/demontazh-zdaniy',
-    slug: 'demontazh-zdaniy',
-    iconSrc: '/services/icons/snos.png',
-    iconAlt: 'Демонтаж зданий и сооружений',
-    rootPageSide: 'l',
-    isMovable: true,
+    icon: { side: 'l', src: '/services/icons/blank-truck-teal.png' },
+    onRoot: true,
   },
   {
-    name: 'Полное юридическое сопровождение и предоставление всех закрывающих документов, оформление паспортов отходов',
+    id: '7',
+    name: 'Юридическое сопровождение и оформление паспортов отходов',
+    type: 'other',
     href: '/yuridicheskoe-soprovozhdenie',
-    slug: 'yuridicheskoe-soprovozhdenie',
-    iconSrc: '/services/icons/docs.png',
-    iconAlt:
-      'Полное юридическое сопровождение и предоставление всех закрывающих документов, оформление паспортов отходов',
-    rootPageSide: 'l',
-    isMovable: false,
+    onRoot: true,
   },
   {
+    id: '8',
     name: 'Доставка пескогрунта',
+    type: 'inert',
     href: '/dostavka-peskogrunta',
-    slug: 'dostavka-peskogrunta',
-    iconSrc: '/services/icons/blank-truck-teal-rev.png',
-    iconAlt: 'Доставка пескогрунта',
-    rootPageSide: 'r',
-    isMovable: true,
+    icon: { side: 'r', src: '/services/icons/blank-truck-teal-rev.png' },
+    onRoot: true,
   },
   {
+    id: '9',
     name: 'Доставка асфальтной крошки',
+    type: 'inert',
     href: '/dostavka-kroshki',
-    slug: 'dostavka-kroshki',
-    iconSrc: '/services/icons/blank-truck-teal-rev.png',
-    iconAlt: 'Доставка асфальтной крошки',
-    rootPageSide: 'r',
-    isMovable: true,
+    icon: { side: 'r', src: '/services/icons/blank-truck-teal-rev.png' },
+    onRoot: true,
   },
   {
+    id: '10',
     name: 'Доставка кирпичного боя',
+    type: 'inert',
     href: '/dostavka-kirpicha',
-    slug: 'dostavka-kirpicha',
-    iconSrc: '/services/icons/blank-truck-teal-rev.png',
-    iconAlt: 'Доставка кирпичного боя',
-    rootPageSide: 'r',
-    isMovable: true,
+    icon: { side: 'r', src: '/services/icons/blank-truck-teal-rev.png' },
+    onRoot: true,
   },
   {
+    id: '11',
     name: 'Доставка нерудных материалов',
+    type: 'inert',
     href: '/dostavka-nerud',
-    slug: 'dostavka-nerud',
-    iconSrc: '/services/icons/blank-truck-teal-rev.png',
-    iconAlt: 'Доставка нерудных материалов',
-    rootPageSide: 'r',
-    isMovable: true,
+    icon: { side: 'r', src: '/services/icons/blank-truck-teal-rev.png' },
+    onRoot: true,
   },
   {
+    id: '12',
     name: 'Доставка плодородной земли',
+    type: 'inert',
     href: '/dostavka-zemli',
-    slug: 'dostavka-zemli',
-    iconSrc: '/services/icons/blank-truck-teal-rev.png',
-    iconAlt: 'Доставка плодородной земли',
-    rootPageSide: 'r',
-    isMovable: true,
+    icon: { side: 'r', src: '/services/icons/blank-truck-teal-rev.png' },
+    onRoot: true,
   },
 ];
 

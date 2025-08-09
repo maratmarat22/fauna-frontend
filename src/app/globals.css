@@ -19,6 +19,7 @@ html {
     color-mix(in srgb, var(--color-main) 20%, white) 100%
   );
   --header-height: 120px;
+  --hero-bg-image: url('/bg-images/light/hero.png');
 }
 
 @theme inline {
@@ -42,12 +43,8 @@ html {
     --separator: #555555;
     --footer: var(--bg-contrast);
     --footer-separator: #444444;
-    --bg-main-gradient: radial-gradient(
-      circle at 20% 30%,
-      #2a2a2a 0%,
-      #1c1c1c 40%,
-      #0f0f0f 100%
-    );
+    --bg-main-gradient: radial-gradient(circle at 20% 30%, #2a2a2a 0%, #1c1c1c 40%, #0f0f0f 100%);
+    --hero-bg-image: url('/bg-images/dark/hero.png');
   }
 }
 
@@ -59,6 +56,12 @@ body {
 
 select option {
   background-color: var(--bg-contrast);
+}
+
+.hero {
+  background: var(--hero-bg-image);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .section-header {

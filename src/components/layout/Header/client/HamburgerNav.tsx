@@ -3,12 +3,7 @@
 import { useState } from 'react';
 import { LuMenu, LuX } from 'react-icons/lu';
 import Link from 'next/link';
-
-const links = [
-  { name: 'Главная', href: '/' },
-  { name: 'Услуги', href: '/service' },
-  { name: 'Автопарк', href: '/#cars' },
-];
+import links from '../data/links';
 
 const HamburgerNav = ({ pathname }: { pathname: string }) => {
   const [navOpen, setNavOpen] = useState(false);

@@ -11,16 +11,18 @@ export const contactOptions: Option[] = [
 
 export const serviceOptions: Option[] = [
   blank,
-  ...services.map(s => ({ value: s.slug, label: s.name })),
+  ...services.map(s => ({ value: s.id, label: s.name })),
 ];
 
 export const volumeOptions: Option[] = [
   blank,
-  { value: '1', label: 'до 1 м³' },
-  { value: '3', label: '1–3 м³' },
-  { value: '5', label: '3–5 м³' },
-  { value: '10', label: '5–10 м³' },
-  { value: '20', label: 'свыше 10 м³' },
+  { value: '8', label: '8 м³' },
+  { value: '20', label: '20 м³' },
+  { value: '27', label: '27 м³' },
+  { value: '30', label: '30 м³' },
+  { value: '32', label: '32 м³' },
+  { value: '34', label: '34 м³' },
+  { value: '36', label: '36 м³' },
 ];
 
 export const districtOptions: Option[] = [

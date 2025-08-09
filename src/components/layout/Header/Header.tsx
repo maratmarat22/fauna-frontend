@@ -1,13 +1,8 @@
 import Link from 'next/link';
-import Logo from '@/components/layout/Logo';
-import HamburgerNav from '@/components/layout/client/HamburgerNav';
+import Logo from '@/components/layout/Header/Logo';
+import HamburgerNav from '@/components/layout/Header/client/HamburgerNav';
 import { FiMessageSquare } from 'react-icons/fi';
-
-const links = [
-  { name: 'Главная', href: '/' },
-  { name: 'Услуги', href: '/service' },
-  { name: 'Автопарк', href: '/#cars' },
-];
+import links from './data/links';
 
 const Header = ({ pathname }: { pathname: string }) => {
   return (
