@@ -101,6 +101,8 @@ select option {
   border-bottom-width: 1px;
   border-left-style: var(--tw-border-style);
   border-left-width: 1px;
+  font-size: var(--text-base);
+  line-height: var(--tw-leading, var(--text-base--line-height));
 }
 
 @media (max-width: 767px) {

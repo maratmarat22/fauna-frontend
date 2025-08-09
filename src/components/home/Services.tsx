@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import services from '@/data/services';
+import services from '@/shared/services';
 
 const Services = ({ id, className }: { id: string; className?: string }) => {
   return (
@@ -39,7 +39,7 @@ const Services = ({ id, className }: { id: string; className?: string }) => {
                         alt={s.iconAlt}
                         width={1024}
                         height={1024}
-                        className={`transition-transform delay-100 duration-500 ${s.isAnimatable ? 'group-hover:translate-x-50' : ''}`}
+                        className={`transition-transform delay-100 duration-500 ${s.isMovable ? 'group-hover:translate-x-50' : ''}`}
                         style={{ maxWidth: 128, maxHeight: 128 }}
                       />
                     </div>
@@ -72,7 +72,7 @@ const Services = ({ id, className }: { id: string; className?: string }) => {
                         alt={s.iconAlt}
                         width={1024}
                         height={1024}
-                        className={`transition-transform delay-50 duration-500 ${s.isAnimatable ? 'group-hover:-translate-x-50' : ''}`}
+                        className={`transition-transform delay-50 duration-500 ${s.isMovable ? 'group-hover:-translate-x-50' : ''}`}
                         style={{ maxWidth: 128, maxHeight: 128 }}
                       />
                     </div>

@@ -6,7 +6,7 @@ type Service = {
   iconSrc: string;
   iconAlt: string;
   rootPageSide: 'l' | 'r';
-  isAnimatable: boolean;
+  isMovable: boolean;
 };
 
 const services: Service[] = [
@@ -17,7 +17,7 @@ const services: Service[] = [
     iconSrc: '/services/icons/blank-truck-teal.png',
     iconAlt: 'Вывоз строительных отходов',
     rootPageSide: 'l',
-    isAnimatable: true,
+    isMovable: true,
   },
   {
     name: 'Вывоз производственных отходов',
@@ -26,7 +26,7 @@ const services: Service[] = [
     iconSrc: '/services/icons/blank-truck-teal.png',
     iconAlt: 'Вывоз производственных отходов',
     rootPageSide: 'l',
-    isAnimatable: true,
+    isMovable: true,
   },
   {
     name: 'Вывоз отходов, образованных при сносе и разборе зданий',
@@ -35,7 +35,7 @@ const services: Service[] = [
     iconSrc: '/services/icons/blank-truck-teal.png',
     iconAlt: 'Вывоз отходов, образованных при сносе и разборе зданий',
     rootPageSide: 'l',
-    isAnimatable: true,
+    isMovable: true,
   },
   {
     name: 'Вывоз грунта',
@@ -44,7 +44,7 @@ const services: Service[] = [
     iconSrc: '/services/icons/blank-truck-teal.png',
     iconAlt: 'Вывоз грунта',
     rootPageSide: 'l',
-    isAnimatable: true,
+    isMovable: true,
   },
   {
     name: 'Вывоз и утилизация снега',
@@ -53,7 +53,7 @@ const services: Service[] = [
     iconSrc: '/services/icons/blank-truck-teal.png',
     iconAlt: 'Вывоз и утилизация снега',
     rootPageSide: 'l',
-    isAnimatable: true,
+    isMovable: true,
   },
   {
     name: 'Демонтаж зданий и сооружений',
@@ -62,7 +62,7 @@ const services: Service[] = [
     iconSrc: '/services/icons/snos.png',
     iconAlt: 'Демонтаж зданий и сооружений',
     rootPageSide: 'l',
-    isAnimatable: true,
+    isMovable: true,
   },
   {
     name: 'Полное юридическое сопровождение и предоставление всех закрывающих документов, оформление паспортов отходов',
@@ -72,7 +72,7 @@ const services: Service[] = [
     iconAlt:
       'Полное юридическое сопровождение и предоставление всех закрывающих документов, оформление паспортов отходов',
     rootPageSide: 'l',
-    isAnimatable: false,
+    isMovable: false,
   },
   {
     name: 'Доставка пескогрунта',
@@ -81,7 +81,7 @@ const services: Service[] = [
     iconSrc: '/services/icons/blank-truck-teal-rev.png',
     iconAlt: 'Доставка пескогрунта',
     rootPageSide: 'r',
-    isAnimatable: true,
+    isMovable: true,
   },
   {
     name: 'Доставка асфальтной крошки',
@@ -90,7 +90,7 @@ const services: Service[] = [
     iconSrc: '/services/icons/blank-truck-teal-rev.png',
     iconAlt: 'Доставка асфальтной крошки',
     rootPageSide: 'r',
-    isAnimatable: true,
+    isMovable: true,
   },
   {
     name: 'Доставка кирпичного боя',
@@ -99,7 +99,7 @@ const services: Service[] = [
     iconSrc: '/services/icons/blank-truck-teal-rev.png',
     iconAlt: 'Доставка кирпичного боя',
     rootPageSide: 'r',
-    isAnimatable: true,
+    isMovable: true,
   },
   {
     name: 'Доставка нерудных материалов',
@@ -108,7 +108,7 @@ const services: Service[] = [
     iconSrc: '/services/icons/blank-truck-teal-rev.png',
     iconAlt: 'Доставка нерудных материалов',
     rootPageSide: 'r',
-    isAnimatable: true,
+    isMovable: true,
   },
   {
     name: 'Доставка плодородной земли',
@@ -117,7 +117,7 @@ const services: Service[] = [
     iconSrc: '/services/icons/blank-truck-teal-rev.png',
     iconAlt: 'Доставка плодородной земли',
     rootPageSide: 'r',
-    isAnimatable: true,
+    isMovable: true,
   },
 ];
 

@@ -1,4 +1,4 @@
-type Request = {
+export type Request = {
   contactType: string | undefined;
   contact: string | undefined;
   service: string | undefined;
@@ -7,4 +7,7 @@ type Request = {
   extra: string | undefined;
 };
 
-export default Request;
+export type PrivacyAgreementData = {
+  ip: string;
+  dateTime: string;
+};

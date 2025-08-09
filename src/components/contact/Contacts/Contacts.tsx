@@ -1,4 +1,4 @@
-import contacts from '@/data/contacts';
+import contacts from './data/contacts';
 
 const Contacts = ({ className }: { className?: string }) => {
   return (

@@ -1,4 +1,4 @@
-import type PrivacyAgreementData from '@/serverActions/privacyAgreementData';
+import type { PrivacyAgreementData } from './data/types';
 
 export default function savePrivacyAgreementData(
   privacyAgreementData: PrivacyAgreementData,

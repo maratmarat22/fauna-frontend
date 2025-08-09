@@ -1,8 +1,8 @@
-import services from '@/data/services';
+import services from '@/shared/services';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
-import Contacts from '@/components/contact/Contacts';
-import RequestForm from '@/components/contact/client/RequestForm';
+import Contacts from '@/components/contact/Contacts/Contacts';
+import RequestForm from '@/components/contact/client/RequestForm/RequestForm';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 
@@ -19,7 +19,7 @@ export default async function ServicePage({
     <div className="flex min-h-screen flex-col">
       <Header pathname={service.href} />
       <main className="mx-auto max-w-screen-xl flex-1">
-        <div className="container mx-auto px-4 py-8">
+        <div className="container mx-auto mt-8 mb-16 px-4">
           {/* Заголовок */}
           <h1 className="mb-6 text-3xl font-bold">{service.name}</h1>
 
@@ -48,7 +48,10 @@ export default async function ServicePage({
           <h2 className="section-header mx-auto mt-16 w-fit text-center">
             ...или оставьте заявку
           </h2>
-          <RequestForm className="bg-bg-contrast mx-auto mt-8 w-fit rounded-2xl p-5" />
+          <RequestForm
+            className="bg-bg-contrast mx-auto mt-8 w-fit rounded-2xl p-5"
+            serviceOption={service.slug}
+          />
         </div>
       </main>
       <Footer pathname={service.href} />

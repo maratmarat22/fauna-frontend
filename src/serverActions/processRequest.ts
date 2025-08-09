@@ -2,13 +2,16 @@
 
 import { headers } from 'next/headers';
 
-import type PrivacyAgreementData from '@/serverActions/privacyAgreementData';
+import type { PrivacyAgreementData } from './data/types';
 import savePrivacyAgreementData from '@/serverActions/savePrivacyAgreement';
 
-import type Request from '@/serverActions/request';
+import type { Request } from './data/types';
 import sendRequestViaWA from '@/serverActions/sendRequestViaWA';
+import { checkHoneypot, checkBadOrigin } from '@/serverActions/checkSpam';
 
 export default async function processOrder(form: FormData) {
+  if (checkHoneypot(form) || (await checkBadOrigin())) return;
+
   const privacyAgreementData: PrivacyAgreementData = {
     ip: (await headers()).get('x-forwarded-for') ?? 'undefined',
     dateTime: new Date().toISOString(),
