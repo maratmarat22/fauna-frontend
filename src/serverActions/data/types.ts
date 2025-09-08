@@ -1,13 +1,14 @@
 export type Request = {
-  contactType: string | undefined;
-  contact: string | undefined;
-  service: string | undefined;
-  volume: string | undefined;
-  district: string | undefined;
+  name: string | undefined;
+  contactType: string;
+  contact: string;
+  service: string;
+  volume: string;
+  district: string;
   extra: string | undefined;
 };
 
-export type PrivacyAgreementData = {
+export type TermsAgreement = {
   ip: string;
   dateTime: string;
 };

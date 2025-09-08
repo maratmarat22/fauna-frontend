@@ -1,9 +1,5 @@
 import { headers } from 'next/headers';
-import {
-  HONEYPOT_FIELD,
-  ORIGIN_ALLOWLIST,
-  COOLDOWN_MS,
-} from '@/serverActions/constants';
+import { HONEYPOT_FIELD, ORIGIN_ALLOWLIST } from '@/serverActions/constants';
 
 /**
  * Returns **true** if honeypot-field is not empty.

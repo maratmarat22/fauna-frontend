@@ -1,7 +1,5 @@
-import type { PrivacyAgreementData } from './data/types';
+import type { TermsAgreement } from './data/types';
 
-export default function savePrivacyAgreementData(
-  privacyAgreementData: PrivacyAgreementData,
-) {
+export default function savePrivacyAgreementData(privacyAgreementData: TermsAgreement) {
   console.log(privacyAgreementData.ip + '\n' + privacyAgreementData.dateTime);
 }
